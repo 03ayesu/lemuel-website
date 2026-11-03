@@ -1,0 +1,4 @@
+Contact: mailto:info@lemuelayesu.site
+Expires: 2027-11-03T00:00:00.000Z
+Canonical: https://lemuelayesu.site/.well-known/security.txt
+Preferred-Languages: en
