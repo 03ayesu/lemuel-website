@@ -1,14 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "lemuel-website.vercel.app"
         }
       ],
-      "destination": "https://lemuelayesu.site/:path*",
+      "destination": "https://lemuelayesu.site/$1",
       "permanent": true
     }
   ]
