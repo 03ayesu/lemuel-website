@@ -4,52 +4,63 @@
 <meta property="og:title" content="Lemuel Ayesu"><meta property="og:description" content="I turn ideas into real products. Web apps, mobile apps, dashboards and SaaS."><meta property="og:type" content="website"><meta property="og:image" content="https://lemuelayesu.site/assets/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css">
 </head><body>
+<canvas id="stars" aria-hidden="true"></canvas>
 <a class="skip" href="#work">Skip to my work</a>
-<header class="head"><div class="wrap"><a href="#top" aria-label="Lemuel Ayesu, top of page"><img src="assets/logo-on-dark.svg" alt="Lemuel Ayesu"></a>
-<nav class="nav-top" aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a data-roadmap href="#">Roadmap</a><a href="#contact">Contact</a></nav></div></header>
+<nav class="dock" aria-label="Main">
+<div class="dock-group"><a class="icon" href="#top" aria-label="Home" aria-current="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg></a><a class="icon" href="#work" aria-label="Work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V5h6v3M3 13h18"/></svg></a><a class="icon" href="#about" aria-label="About"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 5-7 8-7s7 2 8 7"/></svg></a><a class="icon" href="#stack" aria-label="Skills"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></a><a class="icon" data-roadmap href="#" aria-label="Roadmap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 5h13l-3 4 3 4H5"/></svg></a></div>
+<div class="dock-round"><button type="button" class="icon" data-theme-toggle aria-label="Switch light or dark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></button></div>
+<a class="dock-cta" data-email href="#"><i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i>Email me</a>
+</nav>
 <main id="top">
-<section class="hero"><div class="wrap">
-<h1>I turn ideas into <span class="copper">real products</span><span class="dot">.</span></h1>
-<div class="hero-row">
-<div class="hero-left"><span class="tag">Product designer and IT manager</span><div class="actions"><a class="btn btn--primary" href="#contact">Email me</a><a class="btn btn--secondary" href="#work">See my work</a></div></div>
-<div class="avatar-wrap"><img class="avatar" src="assets/avatar.jpg" alt="Lemuel Ayesu's logo mark" width="600" height="600"></div>
-<p class="hero-intro"><strong>Hi, I'm Lemuel.</strong>I design and build web and mobile products, and I run IT systems. I'm working toward becoming one of the best names in IT in Ghana.</p>
-</div></div></section>
-<section class="statement"><div class="wrap"><p>I bring the real users in early, ask the right questions, and make sure what I build doesn't create more problems than it solves.</p></div></section>
-<section class="section" id="work"><div class="wrap">
-<div class="sec-head"><p class="label">Work</p><h2>Selected work</h2></div>
+<section class="hero"><div class="hero-grid">
+<div class="hero-left"><h1><span class="sr">Lemuel Ayesu: </span><span id="role" data-roles="Product Designer|IT Manager|Mobile App Designer|Future CISO">Product Designer</span></h1><div class="actions"><a class="pillbtn" href="#about">About me</a><a class="pillbtn pillbtn--line" href="#work">See my work <span aria-hidden="true">&#8599;</span></a></div></div>
+<div class="hero-mark"><img class="logo-dark" src="assets/mark-dark.svg" alt="Lemuel Ayesu"><img class="logo-light" src="assets/mark-light.svg" alt=""></div>
+<div class="hero-right"><p class="muted">Hi, I'm Lemuel</p><p class="strong">I design and build real products</p><p class="muted">Web apps, mobile apps, and dashboards, designed by someone who also runs the systems they sit on.</p><p class="muted">Product design and IT</p></div>
+</div></section>
+<section class="statement"><p>I bring the real users in early, ask the right questions, and make sure what I build doesn't create more problems than it solves.</p></section>
+<section class="section" id="work">
+<h2>Work.</h2>
 <div class="filters" id="filters" role="group" aria-label="Filter projects" hidden></div>
 <ol id="projects"></ol>
-</div></section>
-<section class="section" id="about"><div class="wrap">
+</section>
+<section class="section" id="roadmap-link"><a class="roadmap" data-roadmap href="#"><span><span class="kicker">Roadmap</span><strong>My tech journey</strong><span class="muted">Everything I'm learning over the next six years, ticked off as I reach it.</span></span><span class="arrow" aria-hidden="true">&#8599;</span></a></section>
+<section class="section" id="about">
+<h2>About me</h2>
 <div class="about-grid">
-<div class="about-side"><p class="label">About</p><h2>About me</h2></div>
 <div class="bio">
+<p class="bio-lead">I do design and I do IT. I'm not giving up either.</p>
 <p>My first computer was in a school ICT lab in Ghana. I was so little I can't remember what I did on it, but I was hooked. I kept talking about computers until my dad bought me a PC. I opened it up, broke things, replaced motherboards, and asked my ICT teacher a lot of questions.</p>
-<p>All my plans were IT. Then I learned design for my final year project, and my first job after school was a design job. I found out I could really do it. When an IT job came up, I took it, because I can do design from anywhere but IT not so much. Now I do both, and I'm not giving up either.</p>
+<p>All my plans were IT. Then I learned design for my final year project, and my first job after school was a design job. I found out I could really do it. When an IT job came up, I took it, because I can do design from anywhere but IT not so much.</p>
 <p>Running real systems changed how I design. I use software and wonder if the person who designed it ever knew how it would be used. That's why I start with the people who'll use it.</p>
-<p>I enjoy designing mobile apps most, because every app has its own flow and style. When something breaks, I like the problems that make me feel I don't know much, because that means I have something new to learn. I don't believe in mediocrity, and I want to be the best at everything I touch.</p>
+<p>I enjoy designing mobile apps most, because every app has its own flow and style. When something breaks, I like the problems that make me feel I don't know much, because that means I have something new to learn. I don't believe in mediocrity, and I want to be one of the best names in IT in Ghana.</p>
+</div>
+<div class="tiles">
+<article class="tile tile--wide"><span class="kicker">The project I'm proud of</span><h3>Driver and Vehicle Licensing Authority</h3><p class="muted">A platform built end to end, with a website for citizens, a system for businesses to manage their fleets, and tools for the authority to manage its clients and site visits.</p></article>
+<article class="tile"><span class="kicker">Away from the screen</span><p class="muted">Books, anime, thrillers, friends, and my Christian family. I love God.</p></article>
+<article class="tile"><span class="kicker">One day</span><p class="muted">Bungee jumping. If it's risky and fun, I'm in.</p></article>
 </div></div>
-<div class="cards">
-<article class="card"><p class="label">The project I'm proud of</p><h3 style="font:700 24px/1.25 var(--display)">Driver and Vehicle Licensing Authority</h3><p>I worked on a platform built end to end, with a website for citizens, a system for businesses to manage their fleets, and tools for the authority to manage its clients and site visits. It was the first time I knew my work could reach a lot of people, and it was hard because the early documentation wasn't clear.</p></article>
-<article class="card"><p class="label">Away from the screen</p><h3 style="font:700 24px/1.25 var(--display)">Books, anime, and big plans</h3><p>I'm usually reading, because I'm big on books, or watching anime or a thriller. I also spend time with friends and my Christian family, and I love God. One day I want to go bungee jumping. If it's risky and fun, I'm in.</p></article>
+<h3 class="minor">Journey</h3>
+<ol class="journey">
+<li><strong>IT Manager</strong><span>Accra, Ghana</span><span>Now</span></li>
+<li><strong>Product designer</strong><span>Part-time</span><span>Now</span></li>
+<li><strong>Designer</strong><span>My first job after school</span><span></span></li>
+<li><strong>Learned design</strong><span>My final year project</span><span></span></li>
+<li><strong>First computer</strong><span>A school ICT lab in Ghana</span><span></span></li>
+</ol>
+<h3 class="minor" id="stack">What I work with</h3>
+<div class="stack">
+<div><span class="kicker">Design</span><p>Mobile apps</p><p>Web apps</p><p>Dashboards</p><p>Design systems</p></div>
+<div><span class="kicker">IT</span><p>Running systems</p><p>Troubleshooting</p><p>PowerShell</p><p>Hardware</p></div>
+<div><span class="kicker">Learning</span><p>Google IT Support</p><p>CompTIA A+</p><p>Security, next</p></div>
 </div>
-<div class="roadmap"><div><p class="label">Roadmap</p><h3>My tech journey</h3><p>Everything I'm learning over the next six years, ticked off as I reach it.</p></div><a class="btn btn--secondary" data-roadmap href="#">See my roadmap</a></div>
-</div></section>
-<section class="contact" id="contact"><div class="wrap">
-<p class="label" style="margin-bottom:16px">Contact</p><h2>Got an idea? Let's make it real.</h2>
-<div class="actions"><a class="btn btn--primary" data-email href="#">Email me</a><span class="contact-mail" id="email-text"></span></div>
-</div></section>
+</section>
 </main>
-<footer><div class="wrap">
-<div class="foot-main">
-<div class="foot-brand"><img src="assets/logo-on-dark.svg" alt="Lemuel Ayesu"><p class="foot-line">I turn ideas into real products. Web apps, mobile apps, dashboards and SaaS.</p></div>
-<div class="foot-col"><p class="label">Explore</p><ul><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a data-roadmap href="#">Roadmap</a></li></ul></div>
-<div class="foot-col"><p class="label">Connect</p><ul><li><a data-email href="#">Email me</a></li><li hidden><a data-linkedin href="#" hidden>LinkedIn</a></li></ul></div>
-</div>
-<div class="foot-end"><span>&copy; <span id="year">2026</span> Lemuel Ayesu. Accra, Ghana.</span></div>
-</div></footer>
-<nav class="nav-bottom" aria-label="Main on phones"><a href="#work">Work</a><a href="#about">About</a><a data-email href="#">Email me</a></nav>
+<footer id="contact">
+<div class="foot-top"><h2>Got an idea? Let's make it real.</h2><a class="pillbtn" data-email href="#">Email me</a></div>
+<div class="foot-links"><div class="foot-brand"><img class="logo-dark" src="assets/logo-dark.svg" alt="Lemuel Ayesu"><img class="logo-light" src="assets/logo-light.svg" alt=""><span class="muted" id="email-text"></span></div>
+<ul><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a data-roadmap href="#">Roadmap</a></li><li><a data-linkedin href="#" hidden>LinkedIn</a></li></ul></div>
+<div class="foot-end"><span>&copy; <span id="year">2026</span> Lemuel Ayesu. Accra, Ghana.</span><span>Designed and built by Lemuel</span></div>
+</footer>
 
-<script src="config.js"></script><script src="projects.js"></script><script src="app.js"></script>
+<script src="config.js"></script><script src="projects.js"></script><script src="app.js"></script><script src="shell.js"></script>
 </body></html>
