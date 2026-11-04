@@ -59,6 +59,12 @@ h2{font:600 clamp(40px,5.6vw,84px)/1.02 var(--font);letter-spacing:-.035em}
 
 .inverted .dock-cta{background:var(--on-inv);color:var(--inv)}.inverted .dock-cta i{background:var(--inv);color:var(--on-inv)}.inverted .progress i{background:var(--on-inv)}
 .dock-cta,.dock-cta i{transition:background-color .3s,color .3s}
+.dock .icon{position:relative}
+.dock .icon::after{content:attr(aria-label);position:absolute;top:calc(100% + 12px);left:50%;padding:7px 11px;border-radius:10px;background:var(--inv);color:var(--on-inv);font:500 13px/1 var(--font);white-space:nowrap;pointer-events:none;opacity:0;transform:translate(-50%,-4px);transition:opacity .15s,transform .2s var(--out);z-index:2}
+.dock .icon:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+@media (hover:hover){.dock .icon:hover::after{opacity:1;transform:translate(-50%,0)}}
+@media (max-width:640px){.dock .icon::after{top:auto;bottom:calc(100% + 12px)}}
+.inverted .dock .icon::after{background:var(--on-inv);color:var(--inv)}
 /* buttons */
 .pillbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:24px;background:var(--card);border:1px solid var(--hair2);color:var(--fg);font:500 15px/1 var(--font);text-decoration:none;transition:background-color .2s,color .2s,transform .35s var(--out)}
 .pillbtn:hover{background:var(--card2)}
