@@ -25,7 +25,7 @@
   var form = document.getElementById("contact"), status = document.getElementById("status"), btn = form.querySelector(".send");
   var params = new URLSearchParams(location.search);
   if (params.get("sent") === "1") say("Thanks, your message is on its way. I'll reply soon.", "ok");
-  if (params.get("sent") === "0") say("Something went wrong sending that. Please email info@lemuelayesu.site.", "err");
+  if (params.get("sent") === "0") say("Something went wrong sending that. Please email 03.ayesu@gmail.com.", "err");
 
   function say(text, kind) { status.textContent = text; status.className = "status " + (kind || ""); }
   function check() {
@@ -47,7 +47,7 @@
     fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || "failed"); }); })
       .then(function () { form.reset(); say("Thanks, your message is on its way. I'll reply soon.", "ok"); })
-      .catch(function () { say("Something went wrong sending that. Please try again, or email info@lemuelayesu.site.", "err"); })
+      .catch(function () { say("Something went wrong sending that. Please try again, or email 03.ayesu@gmail.com.", "err"); })
       .then(function () { btn.disabled = false; btn.textContent = "Send message"; });
   });
 })();
